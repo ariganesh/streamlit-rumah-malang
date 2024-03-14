@@ -25,7 +25,7 @@ st.write("- Mengecek outlier")
 st.code("outliers = detect_outliers_iqr(data)")
 
 st.subheader("3. Model")
-st.write("Model menggunakan algoritma regresi linear. Regresi linear sering dipilih untuk memprediksi suatu harga karena kemampuannya yang mudah diinterpretasikan, kemampuan untuk menangkap hubungan linier antara variabel prediktor dan harga, serta ketersediaan data yang mencukupi. Model ini menawarkan prediksi yang sederhana namun cukup akurat, cocok untuk situasi di mana interpretasi yang mudah dipahami lebih diutamakan daripada kompleksitas model. Kemampuan regresi linear untuk memberikan rekomendasi harga yang berguna bagi pembeli dan penjual, serta kecepatan komputasinya yang tinggi, membuatnya menjadi pilihan yang populer dalam analisis harga rumah.")
+st.write("Model menggunakan algoritma regresi linear. Regresi linear sering dipilih dalam penentuan suatu harga karena kemampuannya yang mudah diinterpretasikan, kemampuan untuk menangkap hubungan linier antara variabel prediktor dan harga, serta ketersediaan data yang mencukupi. Model ini menawarkan prediksi yang sederhana namun cukup akurat, cocok untuk situasi di mana interpretasi yang mudah dipahami lebih diutamakan daripada kompleksitas model. Kemampuan regresi linear untuk memberikan rekomendasi harga yang berguna bagi pembeli dan penjual, serta kecepatan komputasinya yang tinggi, membuatnya menjadi pilihan yang populer dalam analisis harga rumah.")
 
 st.subheader("4. Evaluasi")
 st.write("Evaluasi yang digunakan adalah akurasi yang menggambarkan ketepatan model menebak harga target")
