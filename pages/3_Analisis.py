@@ -7,8 +7,8 @@ import altair as alt
 st.title('Klasifikasi Harga Jual Rumah Wilayah Malang')
 st.header("Analisis")
 
-file_path = 'dataset2.xlsx'
-df = pd.read_excel(file_path)
+#file_path = 'dataset2.xlsx'
+df = pd.read_excel('dataset2.xlsx)
 
 
 col1, col2= st.columns(2)
