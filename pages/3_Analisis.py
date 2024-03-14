@@ -48,8 +48,11 @@ with col2:
 # Mendapatkan harga tertinggi dan terendah setiap wilayah
 harga_tertinggi = df.groupby('address')['price'].max().reset_index(name='price_max')
 harga_terendah = df.groupby('address')['price'].min().reset_index(name='price_min')
+harga_avg = df.groupby('address')['price'].mean().reset_index(name='price_avg')
+
 # Menggabungkan data harga tertinggi dan terendah
 df_merged = harga_tertinggi.merge(harga_terendah, on='address')
+df_merged = df_merged.merge(harga_avg, on='address')
 # Membuat visualisasi menggunakan Altair
 bars_max = alt.Chart(df_merged).mark_bar().encode(
     x=alt.X('address', title='Wilayah'),
@@ -61,7 +64,12 @@ bars_min = alt.Chart(df_merged).mark_bar(color='blue').encode(
     y=alt.Y('price_min', title='Harga'),
     tooltip=['price_min']
 )
-chart = (bars_max + bars_min).properties(
+line_chart_min = alt.Chart(df_merged).mark_line(color='red').encode(
+    x=alt.X('address', title='Wilayah'),
+    y=alt.Y('price_avg', title='Harga'),
+    tooltip=['price_avg']
+)
+chart = (bars_max + bars_min + line_chart_min).properties(
     width=500,
     title='Harga Tertinggi dan Terendah Setiap Wilayah'
 ).interactive()
