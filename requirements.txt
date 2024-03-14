@@ -4,3 +4,5 @@ streamlit
 pickle
 scikit-learn
 pip==23.2.1
+altair==5.2.0
+matplotlib
